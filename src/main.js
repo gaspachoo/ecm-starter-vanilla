@@ -18,18 +18,19 @@ function changeCardState(card) {
   if (compt == 2) {
     let cardA = visibleCards[0];
     let cardB = visibleCards[1];
-    visibleCards = [];
     if (cardA.innerHTML == cardB.innerHTML) {
       console.log("This is a pair !!");
       setTimeout(() => {
         cardA.style.visibility = 'hidden';
         cardB.style.visibility = 'hidden';
       }, 500);
-    } else {
-      setTimeout(() => {
-        cardA.style.contentVisibility = 'hidden';
-        cardB.style.contentVisibility = 'hidden';
-      }, 1500);
+      visibleCards = [];
     }
+  }
+  if (compt >= 3) {
+    visibleCards[0].style.contentVisibility = 'hidden';
+    visibleCards[1].style.contentVisibility = 'hidden';
+    visibleCards = [visibleCards[2]];
+    console.log(visibleCards);
   }
 }
