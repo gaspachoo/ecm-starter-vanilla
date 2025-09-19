@@ -12,5 +12,8 @@
   "devDependencies": {
     "prettier": "^3.6.2",
     "vite": "^7.1.2"
+  },
+  "dependencies": {
+    "js-confetti": "^0.13.1"
   }
 }
