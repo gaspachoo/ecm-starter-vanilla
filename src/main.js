@@ -24,7 +24,7 @@ function changeCardState(card) {
           const jsConfetti = new JSConfetti();
           jsConfetti.addConfetti();
         }
-      }, 500);
+      }, 100);
       visibleCards = [];
       return;
     }
