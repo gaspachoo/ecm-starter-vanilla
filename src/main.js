@@ -11,7 +11,7 @@ function changeColor() {
   title.style.color = randomHexaColor;
 }
 
-function changeCardColor(card) {
+function changeCardState(card) {
 
   if (compt >= 2) {
     const cards = document.querySelectorAll('.card');
