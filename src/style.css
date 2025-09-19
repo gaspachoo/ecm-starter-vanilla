@@ -33,6 +33,10 @@ h1 {
   height: 5em;
 }
 
+.card {
+  content-visibility: hidden;
+}
+
 #card1 {
   grid-column: 1;
   grid-row: 1;
