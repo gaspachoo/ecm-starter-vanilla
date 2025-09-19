@@ -16,8 +16,17 @@ function changeCardState(card) {
       setTimeout(() => {
         cardA.style.visibility = 'hidden';
         cardB.style.visibility = 'hidden';
+
+        const remainingCards = getRemainingCards();
+        console.log("Cartes restantes après la paire:", remainingCards.length);
+        if (remainingCards.length === 0) {
+          console.log("Félicitations ! Toutes les paires trouvées !");
+          const jsConfetti = new JSConfetti();
+          jsConfetti.addConfetti();
+        }
       }, 500);
       visibleCards = [];
+      return;
     }
   }
   if (compt === 3) {
@@ -29,14 +38,6 @@ function changeCardState(card) {
   if (compt > 3) {
     console.error('Problème, 3 cartes sont visibles!');
   }
-
-  const remainingCards = getRemainingCards();
-  console.log(remainingCards);
-  if (remainingCards.length === 0) {
-    const jsConfetti = new JSConfetti();
-    jsConfetti.addConfetti();
-  }
-
 }
 
 window.changeCardState = changeCardState;
