@@ -10,7 +10,6 @@ function changeColor() {
 let visibleCards = [];
 
 function changeCardState(card) {
-  const cards = document.querySelectorAll('.card');
   const compt = visibleCards.length;
   if (compt == 2) {
     let cardA = visibleCards[0];
@@ -23,7 +22,7 @@ function changeCardState(card) {
   }
 
   if (compt >= 2) {
-    cards.forEach((c) => {
+    visibleCards.forEach((c) => {
       c.style.contentVisibility = "hidden";
     });
     visibleCards = [];
